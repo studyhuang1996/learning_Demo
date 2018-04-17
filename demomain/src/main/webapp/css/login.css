@@ -1,0 +1,56 @@
+/*
+ * @(#) login.css
+ * 版权声明 厦门畅享信息技术有限公司, 版权所有 违者必究
+ *
+ * <br> Copyright:  Copyright (c) 2018
+ * <br> Company:厦门畅享信息技术有限公司
+ * <br> @author huang
+ * <br> 2018-04-17 16:38:09
+ */
+
+body{
+    background-color: #CC3333;
+}
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+
+}
+.login-box{
+    background: hsla(0,0%,100%,.3);
+    padding: 60px;
+    border-radius: 20px;
+}
+.login-title{
+    font-size: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-input{
+
+}
+.login-input input{
+    border-left-style: none;
+    border-right-style:none;
+    border-top-style: none;
+    background-color:transparent;
+}
+.login-btn{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-btn input{
+    width: 200px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: #999999;
+}
+.login-btn input:hover{
+
+    background-color: #CCCCCC;
+}
