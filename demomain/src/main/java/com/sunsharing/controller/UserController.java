@@ -32,13 +32,19 @@ public class UserController {
 
     @RequestMapping("login")
     @ResponseBody
-    public ServerResponse<User>  login(String username,String password){
-        if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
+    public ServerResponse<User>  login(User user){
+        if (StringUtils.isEmpty(user.getUsername()) || StringUtils.isEmpty(user.getPassword())) {
           return  ServerResponse.createErrorByMsg("参数为空");
 
         }
-        ServerResponse<User> serverResponse = loginService.login(username, password);
-        return serverResponse;
+        User user1 = loginService.login(user);
+
+        if (user1 == null){
+            System.out.println("查询");
+            return  ServerResponse.createErrorByMsg("账号或者密码错误");
+        }
+        System.out.println(user1.toString());
+        return ServerResponse.createSuccess("成功",user1);
     }
 
 }

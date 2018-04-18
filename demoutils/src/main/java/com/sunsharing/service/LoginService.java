@@ -15,5 +15,5 @@ import com.sunsharing.entity.User;
 
 public interface LoginService {
 
-    ServerResponse<User> login(String userName, String password);
+    User login(User user);
 }

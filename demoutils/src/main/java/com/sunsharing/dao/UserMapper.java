@@ -12,7 +12,7 @@ package com.sunsharing.dao;
 
 import com.sunsharing.entity.User;
 
-public interface IUserDao {
+public interface UserMapper {
 
-   User login(String username,String password);
+   User login(User user);
 }

@@ -11,7 +11,7 @@
 package com.sunsharing.service.impl;
 
 import com.sunsharing.api.ServerResponse;
-import com.sunsharing.dao.IUserDao;
+    import com.sunsharing.dao.UserMapper;
 import com.sunsharing.entity.User;
 import com.sunsharing.service.LoginService;
 
@@ -26,18 +26,11 @@ import javax.annotation.Resource;
 public class LoginServiceImpl implements LoginService {
 
     @Resource
-     private IUserDao userDao;
+     private UserMapper userDao;
 
     @Override
-    public ServerResponse<User> login(String userName, String password) {
-        if (StringUtils.isEmpty(userName) || StringUtils.isEmpty(password)){
-            return null;
-        }
-
-       User user = userDao.login(userName,password);
-        if (user == null){
-            return ServerResponse.createErrorByMsg("账号或者密码错误");
-        }
-        return  ServerResponse.createSuccess("登录成功",user);
+    public User login(User user) {
+       User user1 = userDao.login(user);
+        return user1;
     }
 }

@@ -14,8 +14,13 @@ $(function () {
                    username:$('#username').val(),
                    password:$('#password').val()
                },
-               function(data,status){
-                   alert("数据: \n" + data + "\n状态: " + status);
+               function(data){
+                 if (data.status == 0){
+
+                     alert("数据: \n" + data.data.username + "\n状态: " + data.msg);
+                 }else {
+                     alert(data.msg)
+                 }
                });
     });
 });

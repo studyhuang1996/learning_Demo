@@ -6,7 +6,7 @@
   ~ <br> Copyright:  Copyright (c) 2018
   ~ <br> Company:厦门畅享信息技术有限公司
   ~ <br> @author huang
-  ~ <br> 2018-04-17 14:48:06
+  ~ <br> 2018-04-18 09:41:20
   -->
 
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -68,10 +68,10 @@
 </bean>
 
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-    <property name="dataSource" ref="dataSource"/>
-    <property name="mapperLocations" value="classpath*:mapper/*Mapper.xml"></property>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:com/sunsharing/dao/*.xml"></property>
 
-</bean>
+    </bean>
 
 <bean name="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
     <property name="basePackage" value="com.sunsharing.dao"/>
