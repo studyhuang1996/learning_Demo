@@ -13,7 +13,19 @@ package com.sunsharing.service;
 import com.sunsharing.api.ServerResponse;
 import com.sunsharing.entity.User;
 
-public interface LoginService {
+public interface IUserService {
 
     User login(User user);
+
+    /**
+     * 保存更新
+     * @param user
+     * @return
+     */
+   ServerResponse<String> saveOrUpdate(User user);
+
+   ServerResponse<User> getUserInfo(Integer id);
+
+   ServerResponse<String> deleteUserById(Integer id);
+
 }
