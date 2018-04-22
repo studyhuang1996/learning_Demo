@@ -19,8 +19,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>demomain</module>
-        <module>demoutils</module>
+        <module>demo-web</module>
+        <module>demo-service</module>
     </modules>
 
     <properties>

@@ -40,7 +40,6 @@ public class UserController {
         User user1 = loginService.login(user);
 
         if (user1 == null){
-            System.out.println("查询");
             return  ServerResponse.createErrorByMsg("账号或者密码错误");
         }
         System.out.println(user1.toString());
